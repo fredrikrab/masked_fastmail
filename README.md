@@ -11,7 +11,7 @@ Easily create new aliases for websites or manage existing ones.
 
 ## Usage
 
-![demo](./demo.gif)
+![demo](https://raw.githubusercontent.com/fredrikrab/masked_fastmail/main/demo.gif)
 
 ```text
 Usage:
