@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate Tag Format
+        run: |
+          echo "Validating tag $GITHUB_REF..."
+          if [[ ! "$GITHUB_REF" =~ ^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+(\.[0-9]+)*)?$ ]]; then
+            echo "Invalid tag format: $GITHUB_REF"
+            echo "Expected format: vMAJOR.MINOR.PATCH (e.g. v1.0.0)"
+            echo "(Pre-release tags are also valid, e.g. v1.0.0-alpha)"
+            exit 1
+          fi
+      - name: Set up Go
+        uses: actions/setup-go@v5
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v5
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
