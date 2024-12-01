@@ -68,7 +68,7 @@ masked_fastmail --disable user.1234@fastmail.com
 
 ### Option 1: Download a pre-built binary
 
-Download the latest release from the [releases page](https://github.com/fredrikrab/masked_fastmail/releases).
+Download the latest release from the [releases page](https://github.com/fredrikrab/masked_fastmail/releases/latest).
 
 ### Option 2: Use `go install`
 
