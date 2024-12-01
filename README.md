@@ -88,7 +88,7 @@ go install github.com/fredrikrab/masked_fastmail@latest
 
 #### API documentation
 
-- The API documentation can be found at [https://www.fastmail.com/dev/maskedemail](https://www.fastmail.com/dev/maskedemail)
+- The API documentation can be found at [https://www.fastmail.com/dev/](https://www.fastmail.com/dev/)
 - It's also helpful to review the [JMAP protocol](https://jmap.io/crash-course.html)
 
 ## License
