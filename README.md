@@ -1,13 +1,17 @@
 # Masked Fastmail
 
 A simple CLI tool for managing [Fastmail masked email aliases](https://www.fastmail.com/features/masked-email/).
-Easily create new aliases for websites or manage existing ones.
+
+Easily create new aliases for websites and manage existing ones.
+
+> This project is still under development and may contain bugs.
+> It's a personal project and not in any way affiliated with Fastmail.
 
 ## Features
 
 - Get or create masked email addresses for domains
 - Aliases are automatically copied to clipboard
-- Enable/disable/delete aliases
+- Enable, disable and delete aliases
 
 ## Usage
 
